@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bbrydgespipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bbrydgespipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bbrydgespipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bbrydgespipelinesjavascriptdocker 
+          image: mycontainerregistrybb1.azurecr.io/bbrydgespipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
